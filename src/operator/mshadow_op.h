@@ -312,6 +312,13 @@ struct minus_sign {
   }
 };
 
+struct equals {
+  template<typename DType>
+  MSHADOW_XINLINE static DType Map(DType a, DType b) {
+    return DType(a == b);
+  }
+};
+
 }  // namespace mshadow_op
 }  // namespace op
 }  // namespace mxnet
